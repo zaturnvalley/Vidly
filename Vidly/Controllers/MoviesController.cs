@@ -14,7 +14,7 @@ namespace Vidly.Controllers
         {
 			var movie = new Movie() { Name = "The Room" };
 
-            return View();
+            return View(movie);
         }
     }
 }
