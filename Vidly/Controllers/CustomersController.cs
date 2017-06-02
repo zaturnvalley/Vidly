@@ -7,18 +7,13 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
-	public class CustomersController
+	public class CustomersController : Controller
 	{
 		public ViewResult Index()
 		{
 			var customers = GetCustomers();
 
 			return View(customers);
-		}
-
-		private ViewResult View(IEnumerable<Customer> customers)
-		{
-			throw new NotImplementedException();
 		}
 
 		public ActionResult Details(int id)
@@ -30,12 +25,7 @@ namespace Vidly.Controllers
 			return View(customer);
 		}
 
-		private ActionResult HttpNotFound()
-		{
-			throw new NotImplementedException();
-		}
-
-		private ActionResult View(Customer customer)
+		private new ActionResult HttpNotFound()
 		{
 			throw new NotImplementedException();
 		}
